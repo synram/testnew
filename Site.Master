@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DATourMobile.SiteMaster" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Mobile - datour.dk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="Scripts/modernizr.custom.71186.js"></script>
+    <script type="text/javascript" src="Scripts/script.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <section>
+    <!-- header panel start here -->
+    <header>
+    <h1><a href="default.aspx"><img src="images/logo_main_s1.png" alt="Danish AmAteur Tour" /></a></h1>
+    </header>
+    <section class="middlepanelarea">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </section>
+    <footer>
+    <div class="middlefootbut">
+        <button class="questbutton">?</button>
+        <button class="questbutton questdatour" onclick="window.open('http://datour.dk'); return false;">datour.dk</button>
+        <button class="questbutton kontaktbutton" onclick="window.location.href = 'ContactUs.aspx'; return false;">Kontakt</button>
+        </div>
+        <div class="bottombg">&nbsp;</div>
+    </footer>
+    </section>
+    </form>
+    <div id="divResult" style="display:none;"></div>
+</body>
+</html>
